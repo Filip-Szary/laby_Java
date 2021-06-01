@@ -42,4 +42,9 @@ public class Car extends Device {
     public int hashCode() {
         return doors;
     }
+
+    @Override
+    public void turnOn() {
+        System.out.println("Samochód jest włączony");
+    }
 }
