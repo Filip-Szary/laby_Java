@@ -13,6 +13,11 @@ public class Main {
         dog.species = "Jack Russell terrier";
         dog.weight = 10.0;
 
+        Car clio = new Car("Clio", "Renault");
+        clio.color = "gray";
+        clio.millage = 200000.0;
+        clio.engineVolume = 1.2;
+
         me.pet = dog;
 
         System.out.println(me.firstName);
@@ -38,5 +43,9 @@ public class Main {
 
         dog.takeForAWalk();
         dog.feed();
+
+        System.out.println("Auto: " + clio.producer + " " + clio.model);
+        me.car = clio;
+        System.out.println("Auto Filipa: " + me.car.producer + " " + me.car.model);
     }
 }
