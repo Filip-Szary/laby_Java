@@ -15,13 +15,13 @@ public class Main {
         dog.species = "Jack Russell terrier";
         dog.weight = 10.0;
 
-        Car clio = new Car("Clio", "Renault", 5);
+        Car clio = new Car("Clio", "Renault", 2010, 5);
         clio.color = "gray";
         clio.mileage = 200000.0;
         clio.engineVolume = 1.2;
         clio.value = 15000.0;
 
-        Car clio2 = new Car("Clio", "Renault", 5);
+        Car clio2 = new Car("Clio", "Renault", 2010, 5);
         clio2.color = "gray";
         clio2.mileage = 200000.0;
         clio2.engineVolume = 1.2;
@@ -58,7 +58,6 @@ public class Main {
         me.setSalary(1000.0);
         me.getSalary();
 
-        System.out.println("Auto: " + clio.producer + " " + clio.model);
         me.setCar(clio);
 
         System.out.println(" == : " + (clio == clio2));
@@ -67,10 +66,13 @@ public class Main {
         System.out.println(clio);
         System.out.println(clio2);
 
-        Phone phone = new Phone("Samsung", "Galaxy S21+", 6.7, "Android");
+        Phone phone = new Phone("Samsung", "Galaxy S21+", 2021, 6.7, "Android");
 
         System.out.println("Car: " + clio);
         System.out.println("Phone: " + phone);
+
+        phone.turnOn();
+        clio.turnOn();
 
 
     }
