@@ -17,6 +17,7 @@ public class Main {
         clio.color = "gray";
         clio.millage = 200000.0;
         clio.engineVolume = 1.2;
+        clio.value = 15000.0;
 
         me.pet = dog;
 
@@ -44,11 +45,10 @@ public class Main {
         dog.takeForAWalk();
         dog.feed();
 
-        System.out.println("Auto: " + clio.producer + " " + clio.model);
-        me.car = clio;
-        System.out.println("Auto Filipa: " + me.car.producer + " " + me.car.model);
-
         me.setSalary(1000.0);
         me.getSalary();
+
+        System.out.println("Auto: " + clio.producer + " " + clio.model);
+        me.setCar(clio);
     }
 }
