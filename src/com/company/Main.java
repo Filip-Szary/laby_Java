@@ -28,51 +28,36 @@ public class Main {
         clio2.value = 15000.0;
         clio2.horsepower = 102;
 
+        Phone phone = new Phone("Samsung", "Galaxy s21+", 2021, 6.7, "Android");
 
         me.pet = dog;
 
-        System.out.println(me.firstName);
-        System.out.println(me.pet.name);
-
-        System.out.println("Imię zwierzęcia: " + dog.name);
-        System.out.println("Obecna waga: " + dog.weight);
-
-        dog.feed();
-        System.out.println("Obecna waga: " + dog.weight);
-
-        dog.takeForAWalk();
-        System.out.println("Obecna waga: " + dog.weight);
-
-        dog.takeForAWalk();
-        System.out.println("Obecna waga: " + dog.weight);
-
-        dog.takeForAWalk();
-        System.out.println("Obecna waga: " + dog.weight);
-
-        dog.takeForAWalk();
-        System.out.println("Obecna waga: " + dog.weight);
-
         dog.takeForAWalk();
         dog.feed();
 
-        me.setSalary(1000.0);
-        me.getSalary();
-
-        me.setCar(clio);
-
-        System.out.println(" == : " + (clio == clio2));
-        System.out.println(" overrided equals() : " + clio.equals(clio2));
-
-        System.out.println(clio);
-        System.out.println(clio2);
-
-        Phone phone = new Phone("Samsung", "Galaxy S21+", 2021, 6.7, "Android");
-
-        System.out.println("Car: " + clio);
-        System.out.println("Phone: " + phone);
+        //me.setCar(clio);
 
         phone.turnOn();
         clio.turnOn();
+
+        me.mobilePhone = phone;
+        me.cash = 40.0;
+
+        Human sister = new Human();
+        sister.cash = 1000.0;
+
+        phone.sell(me, me, 200.0);
+        phone.sell(sister, me, 300.0);
+        phone.sell(me, sister, 8000.0);
+        phone.sell(me, sister, 500.0);
+
+
+        Human slave = new Human();
+        slave.sell(me, sister, 1000.0);
+
+        dog.sell(me, sister, 1000.0);
+
+        clio.sell(me, sister, 10000.0);
 
 
     }
