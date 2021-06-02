@@ -33,18 +33,6 @@ public class Human implements salleable {
         this.garage = new Car[garageCapacity];
     }
 
-    public Car getCar(int slotID) {
-        return this.garage[slotID];
-    }
-
-    public void setCar(Car car, int slotID) {
-        this.garage[slotID] = car;
-    }
-
-    public void takeCar(int slotID) {
-        this.garage[slotID] = null;
-    }
-
     public Double getGarageValue() {
         Double garageValue = 0.0;
 
@@ -87,6 +75,9 @@ public class Human implements salleable {
         for (int i = 0; i < garage.length; i++) {
             if (this.garage[i] == null) {
                 this.garage[i] = newCar;
+                newCar.owners.add(this);
+
+                return;
             }
         }
     }

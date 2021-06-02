@@ -15,7 +15,7 @@ public class Main {
         Human me = new Human("Filip", "Szary", 3);
         Pet cat = new Pet("Brytyjski", 20.0, "Kitku", null);
         FarmAnimal cow = new FarmAnimal("limousine", 150.0, "Krówka", null);
-        Car clio = new Disel("Clio", "Reanult", 2010, 15000.0);
+        Car clio = new Disel("Clio", "Reanult", 2010, 15000.0, me);
         Phone phone = new Phone("Samsung", "Galaxy s21+", 2021, 4500.0, 6.7, "Android");
         Human random = new Human("Natan", "Bąk");
         random.cash = 20000.0;
@@ -43,17 +43,17 @@ public class Main {
         phone.installAnApp(appNames);
 
 
-        Car civic = new LPG("Honda", "Civic", 2005, 5000.0);
-        Car tesla = new Electric("Tesla", "X", 2021, 200000.0);
+        Car civic = new LPG("Honda", "Civic", 2005, 5000.0, me);
+        Car tesla = new Electric("Tesla", "X", 2021, 200000.0, me);
         clio.refuel();
         civic.refuel();
         tesla.refuel();
 
         me.setSalary(3000.0);
         me.cash = 15000.0;
-        me.setCar(clio, 0);
-        me.setCar(civic, 1);
-        me.setCar(tesla, 2);
+        me.addCar(clio);
+        me.addCar(civic);
+        me.addCar(tesla);
 
         System.out.println(me.getGarageValue());
         System.out.println(me.sortGarage());
